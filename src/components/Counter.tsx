@@ -1,7 +1,7 @@
 import React from 'react'
-import { RootState } from '../../store'
-import { decrement, increment } from './counterSlice'
-import { useAppSelector, useAppDispatch } from '../../hooks'
+
+import { decrement, increment } from '../reducers/counterSlice'
+import { useAppSelector, useAppDispatch } from '../hooks'
 
 export function Counter() {
   const count = useAppSelector((state) => state.counter.value)
@@ -10,7 +10,7 @@ export function Counter() {
 
   return (
     <div>
-      <h1>Redux-toolkit</h1>
+      <h2>Redux-toolkit - Functional Component</h2>
       <div>
         <button
           aria-label="Increment value"

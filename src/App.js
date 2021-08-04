@@ -1,7 +1,8 @@
 import React,{useState} from "react";
-import { Counter } from "./features/counter/Counter";
+import { Counter } from "./components/Counter";
 import ClassComponent from "./components/ClassComponent";
 import FunctionalComponent from "./components/FunctionalComponent";
+import ClassCounter from "./components/ClassCounter";
 
 
 
@@ -15,6 +16,7 @@ const App = () =>{
     return (
      <div>
       <Counter></Counter>
+      <ClassCounter></ClassCounter>
       <button onClick={()=>setState({value:!state.value})}>Click</button>
       <ClassComponent myProp={(state.value)?'Different Props':'Passed Prop'} ></ClassComponent>
       <FunctionalComponent myProp={(state.value)?'Different Props':'Passed Prop'}></FunctionalComponent>
