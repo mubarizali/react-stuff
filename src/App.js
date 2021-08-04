@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from "react";
+import { Counter } from "./features/counter/Counter";
+import ClassComponent from "./components/ClassComponent";
+import FunctionalComponent from "./components/FunctionalComponent";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+
+const App = () =>{
+  const [state, setState] = useState({value:false})
+  
+  
+  
+    return (
+     <div>
+      <h1>sdfsf</h1>
+      <Counter></Counter>
+      <button onClick={()=>setState({value:!state.value})}>Click</button>
+      <ClassComponent myProp={(state.value)?'Different Props':'Passed Prop'} ></ClassComponent>
+      <FunctionalComponent myProp={(state.value)?'Different Props':'Passed Prop'}></FunctionalComponent>
+      
+      </div>
+    );
+  
 }
 
 export default App;
