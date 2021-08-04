@@ -10,6 +10,7 @@ export function Counter() {
 
   return (
     <div>
+      <h1>Redux-toolkit</h1>
       <div>
         <button
           aria-label="Increment value"

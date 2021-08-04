@@ -14,7 +14,6 @@ const App = () =>{
   
     return (
      <div>
-      <h1>sdfsf</h1>
       <Counter></Counter>
       <button onClick={()=>setState({value:!state.value})}>Click</button>
       <ClassComponent myProp={(state.value)?'Different Props':'Passed Prop'} ></ClassComponent>
